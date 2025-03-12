@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Parabéns</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="audioPlayer" autoplay loop>
+        <source src="sua-musica.mp3" type="audio/mp3">
+        Seu navegador não suporta a tag de áudio.
+    </audio>
+
+    <div class="app">
+        <div id="tela1" class="tela">
+            <h1>Para: Talita</h1>
+            <h1>De: Andrea</h1>
+            <img src="coracao.png" alt="Imagem Especial" class="imagem">
+            <button onclick="nextScreen(2)">Começar</button>
+        </div>
+        
+        <div id="tela2" class="tela">
+            <h1>❤ Grinch e Harry Potter ❤</h1>
+            <img src="foto2.jpg" alt="Imagem Especial" class="imagem">
+            <button onclick="nextScreen(3)">Próximo</button>
+        </div>
+
+        <div id="tela3" class="tela">
+            <h1>Quando saímos pela primeira vez?</h1>
+            <div class="opcoes">
+                <button onclick="checkAnswer(false)">01/02/2024</button>
+                <button onclick="checkAnswer(true)">16/05/2024</button>
+                <button onclick="checkAnswer(false)">03/10/2024</button>
+            </div>
+            <p id="feedback"></p>
+        </div>
+
+        <div id="tela4" class="tela">
+            <h1>Feliz nosso dia!</h1>
+            <img src="foto1.jpg" alt="Imagem Especial" class="imagem">
+            <p>Te amo!</p>
+            <button onclick="nextScreen(1)">Voltar para o Início</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
