@@ -4,16 +4,16 @@ function nextScreen(screen) {
     document.getElementById(`tela${currentScreen}`).style.display = 'none';
     document.getElementById(`tela${screen}`).style.display = 'block';
     currentScreen = screen;
+
+    // Inicia a música quando o usuário clica no botão "Começar"
+    if (screen === 2) {
+        let audio = document.getElementById("audioPlayer");
+        audio.play().catch(error => console.log("Reprodução bloqueada:", error));
+    }
 }
 
 // Exibe a primeira tela
 document.getElementById("tela1").style.display = 'block';
-
-// Inicia a música automaticamente
-window.addEventListener("DOMContentLoaded", () => {
-    let audio = document.getElementById("audioPlayer");
-    audio.play().catch(error => console.log("Reprodução automática bloqueada pelo navegador:", error));
-});
 
 function checkAnswer(isCorrect) {
     if (isCorrect) {
